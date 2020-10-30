@@ -113,6 +113,27 @@ h1,h2,h3,h4,h5,h6
     background-color: $main-bg
     padding-bottom: 20px
 
+.whatsapp
+    width: 50px
+    height: 50px
+    display: inline
+    position: fixed
+    bottom: 15px
+    right: 10px
+    z-index: 10000
+    animation-name: andrey
+    animation-duration: 2s
+    animation-timing-function: ease
+    animation-iteration-count: infinite
+
+@keyframes andrey
+    0%
+        transform: translateY(0px)
+    50%
+        transform: translateY(-20px)
+    100%
+        transform: translateY(0)
+
 .popup_icon
     font-size: 40px
     position: absolute
@@ -192,7 +213,10 @@ h1,h2,h3,h4,h5,h6
             top: 15px
             left: 15px
             width: 60%
-
+        .active__social
+            a
+                & + a
+                    margin-left: 25px
         .active__link
             display: flex
             flex-direction: column
@@ -220,7 +244,7 @@ h1,h2,h3,h4,h5,h6
         align-items: center
         &__lang
             cursor: pointer
-            margin-left: 40px
+            margin-left: 15px
             display: flex
             align-items: center
             position: relative
@@ -233,6 +257,21 @@ h1,h2,h3,h4,h5,h6
         &__lang__content
             display: flex
             align-items: center
+    &__phone
+        color: $white
+        font-weight: 400
+        font-size: 18px
+        line-height: 23px
+        text-decoration: none !important
+        outline: none
+        margin-left: 25px
+        margin-right: 25px
+        &:hover
+            color: $white
+    &__social
+        display: flex
+        a
+            margin-right: 10px
     &__link
         color: $white
         font-weight: 400
@@ -245,7 +284,7 @@ h1,h2,h3,h4,h5,h6
         &:hover
             color: $white
         & + .header__link
-            margin-left: 40px
+            margin-left: 25px
     &__link_active
         &::after
             display: block

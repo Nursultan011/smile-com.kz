@@ -50,12 +50,23 @@
         &__textarea
             margin-top: 50px !important
 
+    .active__header
+        .active__menu
+            padding-top: 25px !important
+        .active__link
+            a
+                font-size: 1.5rem !important
+                margin-bottom: 25px !important
     .header
         &__navbar
             align-items: flex-start !important
         &__navbar__lang
             margin-top: 9px !important
         &__link
+            display: none !important
+        &__phone
+            display: none !important
+        &__social
             display: none !important
         .hamburger
             display: block !important
@@ -153,7 +164,7 @@
     .active__logo
         width: 100% !important
         img
-            width: 25% !important
+            width: 15% !important
     .active__link
         margin-top: 20vh !important
         a
@@ -164,8 +175,14 @@
         &__navbar
             align-items: flex-start !important
         &__navbar__lang
-            margin-top: 9px !important
+            position: absolute !important
+            right: 10% !important
+            top: 30px
         &__link
+            display: none !important
+        &__phone
+            display: none !important
+        &__social
             display: none !important
         .hamburger
             display: block !important
@@ -204,10 +221,34 @@
                     width: 0 !important
 
 @media (min-width: 992px) and (max-width: 1199px)
+    .active__logo
+        width: 100% !important
+        img
+            margin-top: 5px !important
+            width: 13% !important
+            margin-left: 30px !important
+    .active__link
+        margin-top: 20vh !important
+        a
+            font-size: 34px !important
+            margin-bottom: 60px !important
+
     .header
+        &__navbar__lang
+            position: absolute !important
+            right: 10% !important
+            top: 30px
         &__link
+            position: relative !important
+            display: none !important
             & + .header__link
                 margin-left: 25px !important
+        &__phone
+            display: none !important
+        &__social
+            display: none !important
+        .hamburger
+            display: block !important
 
     .plasmolifting
         &__stages-2
